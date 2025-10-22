@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.scoreboard {
+    background-color: #1B244A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    width: 600px;
+    margin: 50px auto;
+}
+
+.section {
+    text-align: center;
+}
+
+.section h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.score {
+    background-color: #000;
+    color: #F94F6D;
+    font-size: 60px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #9AABD8;
+    color: #1B244A;
+}
