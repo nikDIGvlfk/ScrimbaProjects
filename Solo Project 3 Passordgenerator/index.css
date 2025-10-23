@@ -1,0 +1,70 @@
+body {
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background-color: #e8f8f1;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card h2 span {
+  color: #00a86b;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #00a86b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #00915d;
+}
+
+hr {
+  width: 100%;
+  margin: 20px 0;
+  border: 0.5px solid #ccc;
+}
+
+.password-boxes {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.password {
+  background-color: #1e2a35;
+  color: #5DEF92;
+  padding: 10px;
+  border-radius: 4px;
+  flex: 1;
+  text-align: center;
+  font-family: monospace;
+}
