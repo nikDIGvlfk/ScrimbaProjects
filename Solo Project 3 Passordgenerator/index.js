@@ -15,6 +15,39 @@ function generator() {
     pass2EL.textContent = password2
 }
 
+function copyPassword(el) {
+  const text = el.textContent.trim();
+  if (!text) return;
+
+  // preferred modern API
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      showCopyFeedback(el);
+    }).catch(() => {
+      fallbackCopy(text, el);
+    });
+  } else {
+    fallbackCopy(text, el);
+  }
+}
+
+function fallbackCopy(text, el) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); showCopyFeedback(el); } catch (e) { /* ignore */ }
+  document.body.removeChild(ta);
+}
+
+function showCopyFeedback(el) {
+  const old = el.textContent;
+  el.textContent = 'Copied!';
+  setTimeout(() => { el.textContent = old; }, 900);
+}
+
 
 
 
